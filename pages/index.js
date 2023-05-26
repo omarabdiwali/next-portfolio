@@ -73,12 +73,6 @@ export default function Home() {
   }, [changeLayout])
 
   useEffect(() => {
-    setIntro("");
-    setPara("");
-    setEmail("");
-
-    changeLayout();
-
     const spell = async () => {
       let value = "Hi, My name is Omar Abdiwali and I am a 20 year-old developer.";
       await animateText(value, setIntro);
@@ -92,11 +86,20 @@ export default function Home() {
       await animateText("/socials", setSoc);
     }
 
-    let animate = 1;
-
-    if (animate) {
-      spell().catch(err => console.log(err));
+    const updateSize = () => {
+      let width = window.innerWidth;
+      if (width <= 375) {
+        setSize(1);
+      } else if (width <= 650) {
+        setSize(2);
+      } else {
+        setSize(3);
+      }
     }
+
+    spell().catch(err => console.log(err));
+    updateSize();
+
   }, [])
   
 
