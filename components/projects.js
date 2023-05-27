@@ -45,7 +45,7 @@ export const projects = [
   {
     title: ["Auto-Sign-Up", <BsTwitter className="text-emerald-400 text-3xl " key={6}  /> ],
     body: ["A script that uses Selenium to automate the sign up of my CS class when available, and tweets when completed using Tweepy.", "Python | Selenium | Tweepy"],
-    footer: [ "https://github.com/omarabdiwali/news-bot-twitter" ]
+    footer: [ "https://github.com/omarabdiwali/auto-sign-up" ]
   },
 
   {
