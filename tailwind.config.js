@@ -23,8 +23,8 @@ module.exports = {
       },
       width: {
         'cardfull': '23vw',
-        'cardsmall': '45vh',
-        'cardall': '90vh'
+        'cardsmall': '45vw',
+        'cardall': '90vw'
       },
       maxHeight: {
         'body': '32vh',
