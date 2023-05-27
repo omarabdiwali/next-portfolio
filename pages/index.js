@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react"
 import { projects } from "@/components/projects";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-import CardProjects from "@/components/cardProjects";
 import Link from "next/link";
+import ProjectSec from "@/components/projectsSec";
 
 export default function Home() {
   const [intro, setIntro] = useState("");
@@ -113,7 +113,7 @@ export default function Home() {
         </ul>
       </div>
       <div id="intro" className="text-emerald-400 text-5xl my-2 ml-4 ">/about</div>
-      <div className={`min-h-screen flex transition-all duration-300 delay-150 ease-in-out ${move == 0 && loaded ? "opacity-100" : "opacity-0"}`}>
+      <div className={`min-h-screen flex transition-all duration-300 delay-150 ease-in-out ${move == 0 ? "opacity-100" : "opacity-0"}`}>
         <div className="flex-1 border-none m-auto ml-5">
           <div className="text-slate-700 md:text-5xl sm:text-2xl">
           {intro.substring(0, 3)}
@@ -142,52 +142,7 @@ export default function Home() {
       <div id="projects">
         <div className="text-emerald-400 text-5xl my-5 mx-4">/projects</div>
         <div className={`flex flex-col my-10 space-y-10 transition-all duration-300 delay-150 ease-in-out ${move >= 1 ? "opacity-100" : "opacity-0"}`}>
-          {size == 3 ? (
-            <>
-              <div className="justify-center flex flex-row space-x-5">
-              <CardProjects project={projects[0]} />
-              <CardProjects project={projects[1]} />
-              <CardProjects project={projects[2]} />
-            </div>
-            <div className="justify-center flex flex-row space-x-5">
-              <CardProjects project={projects[3]} />
-              <CardProjects project={projects[4]} />
-              <CardProjects project={projects[5]} />
-            </div>
-            <div className="justify-center flex flex-row space-x-5">
-              <CardProjects project={projects[6]} website={false} />
-              <CardProjects project={projects[7]} website={false} />
-              <CardProjects project={projects[8]} website={false} />
-            </div>
-            </>
-          ) : size == 2 ? (
-              <>
-                <div className="justify-center flex flex-row space-x-5">
-                  <CardProjects project={projects[0]} />
-                  <CardProjects project={projects[1]} />
-                </div>
-                <div className="justify-center flex flex-row space-x-5">
-                  <CardProjects project={projects[2]} />
-                  <CardProjects project={projects[3]} />
-                </div>
-                <div className="justify-center flex flex-row space-x-5">
-                  <CardProjects project={projects[4]} />
-                  <CardProjects project={projects[5]} />
-                </div>
-              </>
-            ) : (
-                <>
-                  <div className="justify-center flex flex-row space-x-5">
-                    <CardProjects project={projects[0]} />
-                  </div>
-                  <div className="justify-center flex flex-row space-x-5">
-                    <CardProjects project={projects[1]} />
-                  </div>
-                  <div className="justify-center flex flex-row space-x-5">
-                    <CardProjects project={projects[2]} />
-                  </div>
-                </>
-          )}
+          <ProjectSec projects={projects} size={size} />
         </div>
       </div>
       <div id="socials" className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
