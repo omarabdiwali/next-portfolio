@@ -88,7 +88,7 @@ export default function Home() {
     }
 
     const updateSize = () => {
-      let width = window.innerWidth;
+      let width = window.screen.width;
       if (width <= 375) {
         setSize(1);
       } else if (width <= 650) {
@@ -98,11 +98,10 @@ export default function Home() {
       }
     }
 
-    spell().catch(err => console.log(err));
     updateSize();
+    spell().catch(err => console.log(err));
 
   }, [])
-  
 
   return (
     <>
@@ -114,7 +113,7 @@ export default function Home() {
         </ul>
       </div>
       <div id="intro" className="text-emerald-400 text-5xl my-2 ml-4 ">/about</div>
-      <div className={`min-h-screen flex transition-all duration-300 delay-150 ease-in-out ${move == 0 ? "opacity-100" : "opacity-0"}`}>
+      <div className={`min-h-screen flex transition-all duration-300 delay-150 ease-in-out ${move == 0 && loaded ? "opacity-100" : "opacity-0"}`}>
         <div className="flex-1 border-none m-auto ml-5">
           <div className="text-slate-700 md:text-5xl sm:text-2xl">
           {intro.substring(0, 3)}
