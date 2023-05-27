@@ -21,7 +21,7 @@ export const projects = [
   {
     title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={2}  /> ],
     body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS | React-Icons"],
-    footer: [ "https://github.com/omarabdiwali/portfolio", "https://omarabdiwali.vercel.app" ]
+    footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {

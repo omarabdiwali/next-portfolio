@@ -20,6 +20,7 @@ module.exports = {
       },
       height: {
         'quarter': '60vh',
+        'body': '35vh'
       },
       width: {
         'cardfull': '23vw',
@@ -27,10 +28,10 @@ module.exports = {
         'cardall': '90vw'
       },
       maxHeight: {
-        'body': '32vh',
+        'body': '35vh'
       },
       screens: {
-        'xs': '375px',
+        'xs': '376px',
         'xxs': '0px'
       }
     },

@@ -147,11 +147,11 @@ export default function Home() {
       <div id="socials" className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
         <div className="text-emerald-400 text-5xl mt-3 ml-4">/socials</div>
         <div className="flex flex-row my-10 justify-center space-x-5 text-5xl">
-          <Link replace href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></Link>
+          <a target="_blank" href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></a>
           <div className="text-cyan-400">•</div>
-          <Link replace href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></Link>
+          <a target="_blank" replace href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></a>
           <div className="text-cyan-400">•</div>
-          <Link href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></Link>
+          <a target="_blank" href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></a>
         </div>
       </div>
     </>
