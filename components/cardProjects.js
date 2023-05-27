@@ -1,5 +1,6 @@
 import { MdLanguage } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
+import Link from "next/link";
 
 export default function CardProjects({ project, website=true }) {
   return (
@@ -15,8 +16,8 @@ export default function CardProjects({ project, website=true }) {
       </div>
       </div>
       <div className="flex flex-row justify-center space-x-10">
-        {website ? <a target="_blank" href={project.footer[1]}><MdLanguage className="absolute bottom-0 left-1/4 text-emerald-400 text-4xl mb-2" /></a> : ""}
-        <a target="_blank" href={project.footer[0]}><AiOutlineGithub className={`absolute ${website ? "bottom-0" : "bottom-0 end-2.5"} text-emerald-400 text-4xl mb-2`} /></a>
+        {website ? <Link replace href={project.footer[1]}><MdLanguage className="absolute bottom-0 left-1/4 text-emerald-400 text-4xl mb-2" /></Link> : ""}
+        <Link replace href={project.footer[0]}><AiOutlineGithub className={`absolute ${website ? "bottom-0" : "bottom-0 end-2.5"} text-emerald-400 text-4xl mb-2`} /></Link>
       </div>
     </div>
   )

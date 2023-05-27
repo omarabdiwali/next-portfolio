@@ -3,6 +3,7 @@ import { projects } from "@/components/projects";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import CardProjects from "@/components/cardProjects";
+import Link from "next/link";
 
 export default function Home() {
   const [intro, setIntro] = useState("");
@@ -126,7 +127,7 @@ export default function Home() {
           <div className="mt-7 leading-tight text-slate-600 md:text-3xl sm:text-xl">{para}</div>
           <div className="mt-7 text-slate-500 md:text-3xl sm:text-xl">
             {email.substring(0, 20)}
-            <a className="text-emerald-400 font-bold underline underline-offset-4" href="mailto:omarabdiwali17@gmail.com">{email.substring(20)}</a>
+            <Link className="text-emerald-400 font-bold underline underline-offset-4" href="mailto:omarabdiwali17@gmail.com">{email.substring(20)}</Link>
           </div>
         </div>
         <div className="center flex-1 border-none m-auto">
@@ -193,11 +194,11 @@ export default function Home() {
       <div id="socials" className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
         <div className="text-emerald-400 text-5xl mt-3 ml-4">/socials</div>
         <div className="flex flex-row my-10 justify-center space-x-5 text-5xl">
-          <a target="_blank" href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></a>
+          <Link replace href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></Link>
           <div className="text-cyan-400">•</div>
-          <a target="_blank" href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></a>
+          <Link replace href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></Link>
           <div className="text-cyan-400">•</div>
-          <a href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></a>
+          <Link href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></Link>
         </div>
       </div>
     </>
