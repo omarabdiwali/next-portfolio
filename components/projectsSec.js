@@ -1,6 +1,7 @@
 import CardProjects from "./cardProjects"
+import { projects } from "./projects"
 
-export default function ProjectSec({ projects, size }) {
+export default function ProjectSec({ size }) {
   return (
     <>
       {size == 3 ? (
@@ -49,7 +50,6 @@ export default function ProjectSec({ projects, size }) {
               </div>
             </>
       )}
-      
     </>
   )
 }

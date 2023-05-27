@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react"
-import { projects } from "@/components/projects";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
@@ -142,7 +141,7 @@ export default function Home() {
       <div id="projects">
         <div className="text-emerald-400 text-5xl my-5 mx-4">/projects</div>
         <div className={`flex flex-col my-10 space-y-10 transition-all duration-300 delay-150 ease-in-out ${move >= 1 ? "opacity-100" : "opacity-0"}`}>
-          <ProjectSec projects={projects} size={size} />
+          <ProjectSec size={size} />
         </div>
       </div>
       <div id="socials" className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
