@@ -31,7 +31,7 @@ export default function Home() {
 
   const changeLayout = useCallback(
     e => {
-      let width = window.innerWidth;
+      let width = window.screen.width;
       if (width <= 375) {
         setSize(1);
       } else if (width <= 650) {
