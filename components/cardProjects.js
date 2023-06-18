@@ -15,8 +15,8 @@ export default function CardProjects({ project, website=true }) {
       </div>
       </div>
       <div className="flex flex-row justify-center space-x-10 h-12 max-h-12">
-        {website ? <a target="_blank" href={project.footer[1]}><MdLanguage className="absolute bottom-0 left-1/4 text-emerald-400 text-4xl mb-2" /></a> : ""}
-        <a target="_blank" href={project.footer[0]}><AiOutlineGithub className={`absolute ${website ? "bottom-0" : "bottom-0 end-2.5"} text-emerald-400 text-4xl mb-2`} /></a>
+        {website ? <a rel="noopener norefferrer" target="_blank" href={project.footer[1]}><MdLanguage className="absolute bottom-0 left-1/4 text-emerald-400 text-4xl mb-2" /></a> : ""}
+        <a rel="noopener norefferrer" target="_blank" href={project.footer[0]}><AiOutlineGithub className={`absolute ${website ? "bottom-0" : "bottom-0 end-2.5"} text-emerald-400 text-4xl mb-2`} /></a>
       </div>
     </div>
   )
