@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
@@ -15,6 +15,9 @@ export default function Home() {
 
   const [size, setSize] = useState(3);
   const [move, setMove] = useState(false);
+
+  const projectRef = useRef(null);
+  const socialsRef = useRef(null);
 
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -45,8 +48,8 @@ export default function Home() {
   const getLocation = useCallback(
     e => {
       const window = e.currentTarget;
-      let projectsTop = document.getElementById("projects").offsetTop;
-      let socialsTop = document.getElementById("socials").offsetTop;
+      let projectsTop = projectRef.current.offsetTop;
+      let socialsTop = socialsRef.current.offsetTop;
 
       if (window.scrollY + innerHeight > socialsTop) {
         setMove(2)
@@ -138,18 +141,18 @@ export default function Home() {
           </center>
         </div>
       </div>
-      <div id="projects">
+      <div id="projects" ref={projectRef}>
         <div className="text-emerald-400 text-5xl my-5 mx-4">/projects</div>
         <div className={`flex flex-col my-10 space-y-10 transition-all duration-300 delay-150 ease-in-out ${move >= 1 ? "opacity-100" : "opacity-0"}`}>
           <ProjectSec size={size} />
         </div>
       </div>
-      <div id="socials" className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
+      <div id="socials" ref={socialsRef} className={`transition-all duration-300 delay-150 ease-in-out ${move == 2 ? "opacity-100" : "opacity-0"}`}>
         <div className="text-emerald-400 text-5xl mt-3 ml-4">/socials</div>
         <div className="flex flex-row my-10 justify-center space-x-5 text-5xl">
           <a rel="noopener norefferrer" target="_blank" href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></a>
           <div className="text-cyan-400">•</div>
-          <a rel="noopener norefferrer" target="_blank" replace href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></a>
+          <a rel="noopener norefferrer" target="_blank" href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></a>
           <div className="text-cyan-400">•</div>
           <a rel="noopener norefferrer" target="_blank" href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></a>
         </div>
