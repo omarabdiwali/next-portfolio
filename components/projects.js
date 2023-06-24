@@ -1,39 +1,39 @@
 import { FaChess } from "react-icons/fa";
 import { GiSnakeTongue, GiCardJoker } from "react-icons/gi";
 import { AiOutlineLineChart, AiFillBook } from "react-icons/ai";
-import { BsWindowFullscreen, BsTwitter, BsTicketDetailedFill } from "react-icons/bs";
+import { BsWindowFullscreen, BsTwitter, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 
 export const projects = [
   
   {
     title: ["Chess", <FaChess className="text-emerald-400 sm:text-xl text-3xl" key={0} /> ],
-    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | MUI | NotiStack | Socket.io | MongoDB"],
+    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Socket.io | MongoDB"],
     footer: [ "https://github.com/omarabdiwali/next-chess", "https://chess-jtgk.onrender.com" ],
   },
 
   {
     title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={1} />],
-    body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS | NotiStack"],
+    body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS"],
     footer: ["https://github.com/omarabdiwali/dijkstra-visualizer", "https://dijkstra-visualizer.vercel.app/"]
   },
 
   {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={2}  /> ],
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={2}  /> ],
+    body: ["This is a Next.js website that allows users to create and store flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
+  },
+
+  {
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={3}  /> ],
     body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS | React-Icons"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {
-    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={3} />],
+    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={4} />],
     body: ["This website is a little library that I made using ReactJS, the Google Books API, and the New York Times API.", "React.js | Chakra UI | Tailwaind CSS"],
     footer: [ "https://github.com/omarabdiwali/openLibrary", "https://open-library.vercel.app" ]
-  },
-
-  {
-    title: [ "Movie Browse", <BsTicketDetailedFill className="text-emerald-400 text-3xl " key={4}  /> ],
-    body: ["This is a React App that displays basic data about movies, TV shows, and whatever is trending using The Movies DB API.", "React.js | MUI"],
-    footer: [ "https://github.com/omarabdiwali/movie-browse", "https://omarabdiwali.github.io/movie-browse" ]
   },
 
   {
