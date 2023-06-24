@@ -151,9 +151,9 @@ export default function Home() {
         <div className="text-emerald-400 text-5xl mt-3 ml-4">/socials</div>
         <div className="flex flex-row my-10 justify-center space-x-5 text-5xl">
           <a rel="noopener norefferrer" target="_blank" href="https://github.com/omarabdiwali"><AiOutlineGithub className="text-emerald-400" /></a>
-          <div className="text-cyan-400">•</div>
+          <div className="text-blue-700 dark:text-cyan-400">•</div>
           <a rel="noopener norefferrer" target="_blank" href="https://linkedin.com/in/omar-abdiwali"><AiFillLinkedin className="text-emerald-400" /></a>
-          <div className="text-cyan-400">•</div>
+          <div className="text-blue-700 dark:text-cyan-400">•</div>
           <a rel="noopener norefferrer" target="_blank" href="mailto:omarabdiwali17@gmail.com"><MdEmail className="text-emerald-400" /></a>
         </div>
       </div>
