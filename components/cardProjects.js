@@ -6,7 +6,7 @@ export default function CardProjects({ project, website=true }) {
     <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative rounded-2xl xs:w-cardsmall sm:w-cardsmall md:w-cardfull xs:min-w-cardsmall sm:min-w-cardsmall bg-blue-200 dark:bg-slate-900">
       <div className="flex flex-row justify-center space-x-4 my-5 max-h-12 h-12">
         <div>{project.title[1]}</div>
-        <div className="font-semibold text-2xl sm:text-lg text-emerald-700 dark:text-emerald-400">{project.title[0]}</div>
+        <div className="font-semibold text-2xl sm:text-lg text-emerald-700 dark:text-emerald-300">{project.title[0]}</div>
       </div>
       <div className="mx-3 h-body max-h-body text-slate-900 dark:text-blue-300 overflow-y-auto">
         {project.body[0]}
