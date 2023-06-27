@@ -5,28 +5,27 @@ import { BsWindowFullscreen, BsTwitter, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 
 export const projects = [
+  {
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={0}  /> ],
+    body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
+  },
   
   {
-    title: ["Chess", <FaChess className="text-emerald-400 sm:text-xl text-3xl" key={0} /> ],
+    title: ["Chess", <FaChess className="text-emerald-400 sm:text-xl text-3xl" key={1} /> ],
     body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Socket.io | MongoDB"],
     footer: [ "https://github.com/omarabdiwali/next-chess", "https://chess-jtgk.onrender.com" ],
   },
 
   {
-    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={1} />],
+    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={2} />],
     body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS"],
     footer: ["https://github.com/omarabdiwali/dijkstra-visualizer", "https://dijkstra-visualizer.vercel.app/"]
   },
 
   {
-    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={2}  /> ],
-    body: ["This is a Next.js website that allows users to create and store flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
-    footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
-  },
-
-  {
     title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={3}  /> ],
-    body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS | React-Icons"],
+    body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
