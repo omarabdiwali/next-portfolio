@@ -46,7 +46,7 @@ export default function ProjectSec({ size }) {
                 <CardProjects project={projects[1]} />
               </div>
               <div className="justify-center flex flex-row space-x-5">
-                <CardProjects project={projects[2]} />
+                <CardProjects project={projects[3]} />
               </div>
             </>
       )}

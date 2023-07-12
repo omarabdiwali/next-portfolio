@@ -24,33 +24,33 @@ export const projects = [
   },
 
   {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={3}  /> ],
+    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={3}  /> ],
+    body: ["A stock simulator using the Finnhub API. Users are able to buy, sell, and view stocks, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
+  },
+
+  {
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={4}  /> ],
     body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {
-    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={4} />],
+    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={5} />],
     body: ["This website is a little library that I made using ReactJS, the Google Books API, and the New York Times API.", "React.js | Chakra UI | Tailwaind CSS"],
     footer: [ "https://github.com/omarabdiwali/openLibrary", "https://open-library.vercel.app" ]
   },
 
   {
-    title: [ "Snake Game", <GiSnakeTongue className="text-emerald-400 text-3xl " key={5}  /> ],
+    title: [ "Snake Game", <GiSnakeTongue className="text-emerald-400 text-3xl " key={6}  /> ],
     body: ["This is the well known snake game. It was created with ReactJS and CSS, with no additional libraries.", "React.js | HTML / CSS"],
     footer: [ "https://github.com/omarabdiwali/snake-game", "https://snake-omarabdiwali.vercel.app"]
   },
 
   {
-    title: ["Auto-Sign-Up", <BsTwitter className="text-emerald-400 text-3xl " key={6}  /> ],
+    title: ["Auto-Sign-Up", <BsTwitter className="text-emerald-400 text-3xl " key={7}  /> ],
     body: ["A script that uses Selenium to automate the sign up of my CS class when available, and tweets when completed using Tweepy.", "Python | Selenium | Tweepy"],
     footer: [ "https://github.com/omarabdiwali/auto-sign-up" ]
-  },
-
-  {
-    title: [ "Stock Program", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={7}  /> ],
-    body: ["A command-line program that gives you a base amount to start with, and allows you to buy stocks with it.", "Python | Beautiful Soup"],
-    footer: [ "https://github.com/omarabdiwali/cmdline-stock-program" ]
   },
 
   {
