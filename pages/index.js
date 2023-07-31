@@ -64,14 +64,14 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("scroll", getLocation);
     return () => {
-      window.addEventListener("scroll", getLocation);
+      window.removeEventListener("scroll", getLocation);
     }
   }, [getLocation]);
 
   useEffect(() => {
     window.addEventListener("resize", changeLayout);
     return () => {
-      window.addEventListener("resize", changeLayout);
+      window.removeEventListener("resize", changeLayout);
     }
   }, [changeLayout])
 
