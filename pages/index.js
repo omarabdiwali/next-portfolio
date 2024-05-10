@@ -77,7 +77,7 @@ export default function Home() {
 
   useEffect(() => {
     const spell = async () => {
-      let value = "Hi, My name is Omar Abdiwali and I am a 20 year-old developer.";
+      let value = "Hi, My name is Omar Abdiwali and I am a 21 year-old developer.";
       await animateText(value, setIntro);
 
       value = "I have used Python, C++, and Javascript with frameworks like React and Next.js to create my projects and do classwork. Currently, I am a junior in university studying Computer Science.";
