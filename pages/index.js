@@ -80,7 +80,7 @@ export default function Home() {
       let value = "Hi, My name is Omar Abdiwali and I am a 21 year-old developer.";
       await animateText(value, setIntro);
 
-      value = "I have used Python, C++, and Javascript with frameworks like React and Next.js to create my projects and do classwork. Currently, I am a junior in university studying Computer Science.";
+      value = "I have used Python, C++, and Javascript with frameworks like React and Next.js to create my projects and do classwork. Currently, I am a senior in university studying Computer Science.";
       await animateText(value, setPara);
 
       await animateText("Trying to reach me: Email!", setEmail);
