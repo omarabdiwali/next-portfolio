@@ -44,7 +44,7 @@ export const projects = [
 
   {
     title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={6}  /> ],
-    body: ["This is the code that made this website using Next.js and Tailwind CSS.", "Next.js | Tailwind CSS"],
+    body: ["This is the code that made this website using Next.js and Tailwind CSS. The background is simulating Conway's Game of Life, also allows users to interact.", "Next.js | Tailwind CSS"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
