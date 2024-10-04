@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
-import { BsPlayCircle, BsPauseCircle } from "react-icons/bs";
+import { TbPlayerPauseFilled, TbPlayerPlayFilled } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import ProjectSec from "@/components/projectsSec";
@@ -300,7 +300,7 @@ export default function Home() {
       {loaded ? <canvas className="fixed" style={{zIndex: "-1"}} ref={canvasRef} width={width} height={height} /> : <></>}
       <div className="fixed motion-reduce:hidden -right-0 z-50 text-emerald-400">
           <div className="text-4xl m-2">
-            <button onClick={startDrawing}>{paused ? <BsPlayCircle /> : <BsPauseCircle />}</button>
+            <button onClick={startDrawing}>{paused ? <TbPlayerPlayFilled /> : <TbPlayerPauseFilled />}</button>
           </div>
       </div>
       <div className={drawing ? "select-none" : ""}>
