@@ -19,9 +19,9 @@ export const projects = [
   },
 
   {
-    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={2}  /> ],
-    body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
-    footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
+    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={3}  /> ],
+    body: ["A stock simulator where users are able to buy, sell, and view stocks and crypto, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
   },
 
   {
@@ -31,21 +31,21 @@ export const projects = [
   },
 
   {
-    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={4}  /> ],
-    body: ["A stock simulator using the Finnhub API. Users are able to buy, sell, and view stocks, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
-    footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
+    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={4}  /> ],
+    body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
   },
 
   {
-    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={5} />],
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={5}  /> ],
+    body: ["This is the code that made this website. The background is simulating Conway's Game of Life, and also allows users to interact with it.", "Next.js | Tailwind CSS"],
+    footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
+  },
+
+  {
+    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={6} />],
     body: ["A wordle clone, able to be played multiple times. Over 7000 words to choose from, giving a definition of the word at the completion.", "Next.js | Node.js | TailwindCSS"],
     footer: [ "https://github.com/omarabdiwali/wrdle", "https://wrrdle.vercel.app" ]
-  },
-
-  {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={6}  /> ],
-    body: ["This is the code that made this website using Next.js and Tailwind CSS. The background is simulating Conway's Game of Life, also allows users to interact.", "Next.js | Tailwind CSS"],
-    footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {

@@ -52,6 +52,11 @@ export default function Home() {
     return ((n % m) + m) % m;
   }
 
+  const getRandom = (value) => {
+    let random = Math.floor(Math.random() * value);
+    return round(random, cellSize, false);
+  }
+
   const animateText = async (value, func) => {
     for (let i = 1; i <= value.length; i++) {
       func(value.substring(0, i));
@@ -59,21 +64,37 @@ export default function Home() {
     }
   }
 
-  const generateStart = (startX, startY) => {
-    let change = Math.round(startX - (startX / 1.5));
-    let startVals = [[startX, startY], [startX, startY + cellSize], [startX - cellSize, startY + cellSize], [startX, startY + 2 * cellSize], 
-    [startX + cellSize, startY + 2 * cellSize], [startX - change, startY], [startX - change - cellSize, startY], [startX - change, startY + cellSize], 
-    [startX - change - cellSize, startY + cellSize], [startX - change - cellSize, startY + cellSize * 2], [startX - change - cellSize * 2, startY + cellSize * 2], 
-    [startX - change - cellSize * 3, startY + cellSize * 2], [startX - change - cellSize * 2, startY + cellSize * 3]];
+  const generateStart = () => {
+    const getFilledNeighbours = (x, y) => {
+      let filled = [];
+      for (let i = 0; i < movement.length; i++) {
+        const [movX, movY] = movement[i];
+        let nextX = mod(movX + x, width), nextY = mod(movY + y, height);
+        if (Math.random() < 0.5) continue;
+        filled.push([nextX, nextY]);
+      }
 
-    for (let i = 0; i < startVals.length; i++) {
-      let [x, y] = startVals[i];
+      return filled;
+    }
+
+    for (let i = 0; i < 24; i++) {
+      let x = getRandom(width), y = getRandom(height);
+      let filled = getFilledNeighbours(x, y);
       const key = `${x},${y}`;
+
+      for (let j = 0; j < filled.length; j++) {
+        let [nx, ny] = filled[j];
+        let nKey = `${nx},${ny}`;
+        if (nKey in previousPosition) continue;
+        previousPosition[nKey] = [nx, ny];
+      } 
+
+      if (key in previousPosition) continue;
       previousPosition[key] = [x, y];
     }
   }
 
-  const getNeighbours = (x, y, position) => {
+  const getNeighbours = (x, y) => {
     let vals = [];
     let count = 0;
     
@@ -81,7 +102,7 @@ export default function Home() {
       const [movX, movY] = movement[i];
       let nextX = mod(movX + x, width), nextY = mod(movY + y, height);
       let key = `${nextX},${nextY}`;
-      let has = key in position ? 1 : 0;
+      let has = key in previousPosition ? 1 : 0;
       let el = [nextX, nextY, has];
       count += has;
       vals.push(el);
@@ -140,22 +161,21 @@ export default function Home() {
   )
 
   const gameOfLife = useCallback(() => {
-    let newPosition = {};
-    let neighBours = {};
-    let skip = {};
-    let neighVals = [];
-
     const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
     if (!runningRef.current || !!isReduced || paused) return;
 
     let canvas = canvasRef.current;
     let ctx = canvas.getContext('2d');
+    let newPosition = {};
+    let neighBours = {};
+    let skip = {};
+    let neighVals = [];
 
     let prevPositionVals = Object.values(previousPosition);
     
     for (let i = 0; i < prevPositionVals.length; i++) {
       let [x, y] = prevPositionVals[i];
-      let [n, count] = getNeighbours(x, y, previousPosition);
+      let [n, count] = getNeighbours(x, y);
       const outerKey = `${x},${y}`;
       for (let j = 0; j < n.length; j++) {
         let [nx, ny, isPos] = n[j];
@@ -175,7 +195,7 @@ export default function Home() {
 
     for (let i = 0; i < neighVals.length; i++) {
       let [x, y] = neighVals[i];
-      let [_, count] = getNeighbours(x, y, previousPosition);
+      let [_, count] = getNeighbours(x, y);
       if (count == 3) {
         newPosition[`${x},${y}`] = [x, y];
       }
@@ -249,7 +269,7 @@ export default function Home() {
       setWidth(roundedW);
       setHeight(roundedH);
 
-      generateStart(roundedW / 2 + 100, roundedH / 2);
+      generateStart();
 
       setLoaded(true);
       if (newWidth <= 375) {
