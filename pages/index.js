@@ -20,19 +20,16 @@ export default function Home() {
   const [about, setAbout] = useState("");
   const [proj, setProj] = useState("");
   const [soc, setSoc] = useState("");
-
   const [hint, setHint] = useState("");
 
   const [size, setSize] = useState(3);
-  const [move, setMove] = useState(false);
-
   const [width, setWidth] = useState(1400);
   const [height, setHeight] = useState(800);
 
-  const [drawing, setDrawing] = useState(false);
   const [paused, setPaused] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  
+  const [move, setMove] = useState(false);
+
   const runningRef = useRef(false);
   const projectRef = useRef(null);
   const socialsRef = useRef(null);
@@ -121,11 +118,9 @@ export default function Home() {
   const startDrawing = () => {
     if (runningRef.current == true) {
       setPaused(true);
-      setDrawing(true);
       runningRef.current = false;
     } else {
       setPaused(false);
-      setDrawing(false);
       runningRef.current = true;
       gameOfLife();
     }
@@ -294,7 +289,7 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    if (runningRef.current || !drawing || !loaded) return;
+    if (runningRef.current || !paused || !loaded) return;
     const endMove = () => {
       window.removeEventListener("mousemove", drawToCanvas);
       window.removeEventListener("mouseup", endMove);
@@ -321,7 +316,7 @@ export default function Home() {
     return () => {
       window.removeEventListener("mousedown", downMove);
     }
-  }, [drawing, loaded])
+  }, [paused, loaded])
 
   return (
     <>
@@ -331,7 +326,7 @@ export default function Home() {
             <button onClick={startDrawing}>{paused ? <TbPlayerPlayFilled /> : <TbPlayerPauseFilled />}</button>
           </div>
       </div>
-      <div className={drawing ? "select-none" : ""}>
+      <div className={paused ? "select-none" : ""}>
         <div className={move ? "z-50 transition-all duration-100 fixed m-4 bottom-0 -right-0" : "transition-all duration-100 fixed bottom-0 -right-36"}>
           <ul className="list-none text-xl sm:text-lg leading-loose text-cyan-400">
             <li><button onClick={() => moveTo("#intro")} className={move == 0 ? "text-teal-800" : "hover:text-teal-400"}>/about</button></li>
