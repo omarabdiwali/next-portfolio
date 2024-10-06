@@ -310,10 +310,10 @@ export default function Home() {
     const drawToCanvas = (e) => {
       let clampedX = round(e.clientX, cellSize, false);
       let clampedY = round(e.clientY, cellSize, false);
-      ctx.fillStyle = "darkblue";
-      ctx.fillRect(clampedX, clampedY, 10, 10);
       const key = `${clampedX},${clampedY}`;
       if (key in previousPosition) return;
+      ctx.fillStyle = "darkblue";
+      ctx.fillRect(clampedX, clampedY, 10, 10);
       previousPosition[key] = [clampedX, clampedY];
     }
 
