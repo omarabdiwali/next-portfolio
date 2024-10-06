@@ -57,6 +57,13 @@ export default function Home() {
     return round(random, cellSize, false);
   }
 
+  const getAge = () => {
+    const yearToMilli = 31536000000;
+    let birth = new Date(2003, 1, 1);
+    let diff = new Date() - birth;
+    return Math.floor(diff / yearToMilli);
+  }
+
   const animateText = async (value, func) => {
     for (let i = 1; i <= value.length; i++) {
       func(value.substring(0, i));
@@ -237,7 +244,8 @@ export default function Home() {
   useEffect(() => {
     const spell = async () => {
       const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
-      let value = "Hi, My name is Omar Abdiwali and I am a 21 year-old developer.";
+      const age = getAge();
+      let value = `Hi, My name is Omar Abdiwali and I am a ${age} year-old developer.`;
       let paraValue = "I have used Python, Java, and Typescript with frameworks like React and Next.js throughout my projects and internship at Amazon." 
       + " Currently, I am a senior in university studying Computer Science.";
       if (!!isReduced) {
