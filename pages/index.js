@@ -245,7 +245,7 @@ export default function Home() {
     const spell = async () => {
       const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
       const age = getAge();
-      let value = `Hi, My name is Omar Abdiwali and I am a ${age} year-old developer.`;
+      let value = `Hi, My name is Omar Abdiwali and I am a ${age}-year-old developer.`;
       let paraValue = "I have used Python, Java, and Typescript with frameworks like React and Next.js throughout my projects and internship at Amazon." 
       + " Currently, I am a senior in university studying Computer Science.";
       if (!!isReduced) {
