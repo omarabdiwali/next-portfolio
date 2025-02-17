@@ -13,13 +13,13 @@ export default function ProjectSec({ size }) {
         </div>
         <div className="justify-center flex flex-row space-x-5">
           <CardProjects project={projects[3]} />
-          <CardProjects project={projects[4]} />
+          <CardProjects project={projects[4]} website={false} />
           <CardProjects project={projects[5]} />
         </div>
         <div className="justify-center flex flex-row space-x-5">
           <CardProjects project={projects[6]} />
           <CardProjects project={projects[7]} />
-          <CardProjects project={projects[8]} website={false} />
+          <CardProjects project={projects[8]} />
         </div>
         </>
       ) : size == 2 ? (
@@ -33,7 +33,7 @@ export default function ProjectSec({ size }) {
               <CardProjects project={projects[3]} />
             </div>
             <div className="justify-center flex flex-row space-x-5">
-              <CardProjects project={projects[4]} />
+              <CardProjects project={projects[4]} website={false} />
               <CardProjects project={projects[5]} />
             </div>
           </>

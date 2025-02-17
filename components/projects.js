@@ -1,6 +1,7 @@
 import { FaChess } from "react-icons/fa";
+import { RiAiGenerate } from "react-icons/ri";
 import { GiNotebook } from "react-icons/gi";
-import { AiOutlineLineChart, AiFillBook, AiOutlineOpenAI } from "react-icons/ai";
+import { AiOutlineLineChart, AiFillBook } from "react-icons/ai";
 import { BsWindowFullscreen, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 import { VscWholeWord } from "react-icons/vsc";
@@ -31,33 +32,33 @@ export const projects = [
   },
 
   {
-    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={4}  /> ],
+    title: ["VSCode AI-Chat", <RiAiGenerate className="text-emerald-400 text-3xl" key={4} /> ],
+    body: ["A VSCode extension that allows users to be able to use different LLMs with their code for free, and giving access to open files.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
+    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
+  },
+
+  {
+    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={5}  /> ],
     body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
   },
 
   {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={5}  /> ],
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={6}  /> ],
     body: ["This is the code that made this website. The background is simulating Conway's Game of Life, and also allows users to interact with it.", "Next.js | Tailwind CSS"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {
-    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={6} />],
+    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={7} />],
     body: ["A wordle clone, able to be played multiple times. Over 7000 words to choose from, giving a definition of the word at the completion.", "Next.js | Node.js | TailwindCSS"],
     footer: [ "https://github.com/omarabdiwali/wrdle", "https://wrrdle.vercel.app" ]
   },
 
   {
-    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={7} />],
+    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={8} />],
     body: ["This website is a little library that I made using ReactJS, the Google Books API, and the New York Times API.", "React.js | Chakra UI | Tailwaind CSS"],
     footer: [ "https://github.com/omarabdiwali/openLibrary", "https://open-library.vercel.app" ]
-  },
-
-  {
-    title: ["VSCode AI-Chat", <AiOutlineOpenAI className="text-emerald-400 text-3xl " key={8}  /> ],
-    body: ["A VSCode extension that allows users to be able to use different LLMs with their code for free, and giving access to open files.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
-    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
   },
   
 ]
