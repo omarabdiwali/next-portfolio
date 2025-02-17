@@ -1,7 +1,7 @@
 import { FaChess } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
-import { AiOutlineLineChart, AiFillBook } from "react-icons/ai";
-import { BsWindowFullscreen, BsTwitter, BsCardText } from "react-icons/bs";
+import { AiOutlineLineChart, AiFillBook, AiOutlineOpenAI } from "react-icons/ai";
+import { BsWindowFullscreen, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 import { VscWholeWord } from "react-icons/vsc";
 
@@ -19,7 +19,7 @@ export const projects = [
   },
 
   {
-    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={3}  /> ],
+    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={2}  /> ],
     body: ["A stock simulator where users are able to buy, sell, and view stocks and crypto, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
   },
@@ -55,9 +55,9 @@ export const projects = [
   },
 
   {
-    title: ["Auto-Sign-Up", <BsTwitter className="text-emerald-400 text-3xl " key={8}  /> ],
-    body: ["A script that uses Selenium to automate the sign up of my CS class when available, and tweets when completed using Tweepy.", "Python | Selenium | Tweepy"],
-    footer: [ "https://github.com/omarabdiwali/auto-sign-up" ]
+    title: ["VSCode AI-Chat", <AiOutlineOpenAI className="text-emerald-400 text-3xl " key={8}  /> ],
+    body: ["A VSCode extension that allows users to be able to use different LLMs with their code for free, and giving access to open files.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
+    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
   },
   
 ]
