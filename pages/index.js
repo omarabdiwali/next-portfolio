@@ -83,8 +83,10 @@ export default function Home() {
 
     for (let i = 0; i < 24; i++) {
       let x = getRandom(width), y = getRandom(height);
-      let filled = getFilledNeighbours(x, y);
       const key = `${x},${y}`;
+      if (key in previousPosition) continue;
+      
+      let filled = getFilledNeighbours(x, y);
 
       for (let j = 0; j < filled.length; j++) {
         let [nx, ny] = filled[j];
@@ -93,7 +95,6 @@ export default function Home() {
         previousPosition[nKey] = [nx, ny];
       } 
 
-      if (key in previousPosition) continue;
       previousPosition[key] = [x, y];
     }
   }
