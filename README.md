@@ -2,6 +2,8 @@
 
 This project is a personal portfolio website built with React, Next.js, and features an interactive background animation based on Conway's Game of Life.
 
+### **Website: https://omarabdiwali.vercel.app**
+
 ## Features
 
 *   **Interactive Background:**  A dynamic and engaging Conway's Game of Life simulation running in the background.  You can interact with it!
