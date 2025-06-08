@@ -243,7 +243,7 @@ export default function Home() {
       const age = getAge();
       let value = `Hi, My name is Omar Abdiwali and I am a ${age}-year-old developer.`;
       let paraValue = "I have used Python, Java, and Typescript with frameworks like React and Next.js throughout my projects and internship at Amazon." 
-      + " Currently, I am a senior in university studying Computer Science.";
+      + " Currently, I am looking for full-time opportunities.";
       if (!!isReduced) {
         setIntro(value);
         setPara(paraValue);
