@@ -8,9 +8,9 @@ import { VscWholeWord } from "react-icons/vsc";
 
 export const projects = [
   {
-    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={0}  /> ],
-    body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
-    footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
+    title: ["VSCode AI-Chat", <RiAiGenerate className="text-emerald-400 text-3xl" key={0} /> ],
+    body: ["A VSCode extension that allows users mention files to LLMs. It also has an 'Agent' Mode, which will execute what the user wants.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
+    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
   },
   
   {
@@ -32,9 +32,9 @@ export const projects = [
   },
 
   {
-    title: ["VSCode AI-Chat", <RiAiGenerate className="text-emerald-400 text-3xl" key={4} /> ],
-    body: ["A VSCode extension that allows users to be able to use different LLMs with their code for free, and giving access to open files.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
-    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={4}  /> ],
+    body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
   },
 
   {
