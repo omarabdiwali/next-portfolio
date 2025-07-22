@@ -137,7 +137,7 @@ export default function Home() {
       setWidth(roundedW);
       setHeight(roundedH);
       
-      if (newWidth <= 375) {
+      if (newWidth <= 500) {
         setSize(1);
       } else if (newWidth <= 650) {
         setSize(2);
@@ -276,7 +276,7 @@ export default function Home() {
       generateStart();
 
       setLoaded(true);
-      if (newWidth <= 375) {
+      if (newWidth <= 500) {
         setSize(1);
       } else if (newWidth <= 650) {
         setSize(2);

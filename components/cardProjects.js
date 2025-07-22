@@ -1,9 +1,9 @@
 import { MdLanguage } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
 
-export default function CardProjects({ project, website=true }) {
+export default function CardProjects({ project, style="", website=true }) {
   return (
-    <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative rounded-2xl xs:w-cardsmall sm:w-cardsmall md:w-cardfull xs:min-w-cardsmall sm:min-w-cardsmall bg-slate-900">
+    <div className={`${style} transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 relative rounded-2xl xs:w-cardsmall sm:w-cardsmall md:w-cardfull xs:min-w-cardsmall sm:min-w-cardsmall bg-slate-900`}>
       <div className="flex flex-row justify-center space-x-3 my-5 mx-3 max-h-9 h-9">
         <div>{project.title[1]}</div>
         <div className="font-semibold text-lg text-emerald-300">{project.title[0]}</div>
