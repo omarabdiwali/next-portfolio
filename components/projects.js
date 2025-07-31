@@ -8,9 +8,9 @@ import { VscWholeWord } from "react-icons/vsc";
 
 export const projects = [
   {
-    title: ["VSCode AI-Chat", <RiAiGenerate className="text-emerald-400 text-3xl" key={0} /> ],
-    body: ["A VSCode extension that allows users mention files to LLMs. It also has an 'Agent' Mode, which will execute what the user wants.", "Node.js | OpenRouter | VSCode | HTML | CSS"],
-    footer: [ "https://github.com/omarabdiwali/vscode-ai-chat" ]
+    title: ["CodeNexus AI", <RiAiGenerate className="text-emerald-400 text-3xl" key={0} /> ],
+    body: ["A VSCode extension that allows users mention files to LLMs, with OpenRouter and Ollama integration. It also has an 'Agent' Mode, which will execute what the user wants.", "Node.js | OpenRouter | Ollama | VSCode | HTML | CSS"],
+    footer: [ "https://github.com/omarabdiwali/codenexus-ai" ]
   },
   
   {
