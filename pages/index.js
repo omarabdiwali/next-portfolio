@@ -328,8 +328,8 @@ export default function Home() {
           </div>
       </div>
       <div className={paused ? "select-none" : ""}>
-        <div className={move ? "z-50 transition-all duration-100 fixed m-4 bottom-0 -right-0" : "transition-all duration-100 fixed bottom-0 -right-36"}>
-          <ul className="list-none text-xl sm:text-lg leading-loose text-cyan-400">
+        <div className={size == 1 ? 'hidden' : move ? "z-50 transition-all duration-100 fixed m-4 bottom-0 -right-0" : "transition-all duration-100 fixed bottom-0 -right-36"}>
+          <ul className="list-none text-xl leading-loose text-cyan-400">
             <li><button onClick={() => moveTo("#intro")} className={move == 0 ? "text-teal-800" : "hover:text-teal-400"}>/about</button></li>
             <li><button onClick={() => moveTo("#projects")} className={move == 1 ? "text-teal-800" : "hover:text-teal-400"}>/projects</button></li>
             <li><button onClick={() => moveTo("#socials")} className={move == 2 ? "text-teal-800" : "hover:text-teal-400"}>/socials</button></li>
@@ -337,29 +337,29 @@ export default function Home() {
         </div>
         <div id="intro" className="text-emerald-400 text-5xl my-2 ml-4 ">/about</div>
         <div className={`min-h-screen flex transition-all duration-300 delay-150 ease-in-out ${move == 0 ? "opacity-100" : "opacity-0"}`}>
-          <div className="flex-1 border-none m-auto ml-5">
-            <div className="text-slate-700 md:text-5xl sm:text-2xl">
+          <div className={`flex-1 ${size == 1 ? 'text-3xl' : ''} border-none m-auto ml-5`}>
+            <div className="text-slate-700 md:text-5xl">
             {intro.substring(0, 3)}
             </div>
-            <div className="mt-2 leading-tight text-slate-700 md:text-5xl sm:text-2xl">
+            <div className="mt-2 leading-tight text-slate-700 md:text-5xl">
               {intro.substring(3, 15)}
               <span className="text-emerald-400 font-thin">{intro.substring(15, 28)}</span>
               {intro.substring(28)}
             </div>
-            <div className="mt-7 leading-tight text-slate-600 md:text-3xl sm:text-xl">
+            <div className="mt-7 leading-tight text-slate-600 md:text-3xl">
               {para.substring(0, 121)}
               <span className="text-[#FF9900]">{para.substring(121, 128)}</span>
               {para.substring(128)}
             </div>
-            <div className="mt-7 text-slate-500 md:text-3xl sm:text-xl">
+            <div className="mt-7 text-slate-500 md:text-3xl">
               {email.substring(0, 20)}
               <Link className="text-emerald-400 font-bold underline underline-offset-4" href="mailto:omarabdiwali17@gmail.com">{email.substring(20)}</Link>
             </div>
             <div className="mt-7">
-              <div className="text-emerald-400 font-thin lg:text-2xl text-emerald-400 md:text-xl sm:text-md">{hint}</div>
+              <div className="text-emerald-400 font-thin lg:text-2xl text-emerald-400 md:text-xl">{hint}</div>
             </div>
           </div>
-          <div className="center flex-1 border-none m-auto">
+          <div className={size > 1 ? "center flex-1 border-none m-auto" : "hidden"}>
             <center>
               <ul className="list-none text-4xl leading-loose text-emerald-400">
                 <li><button onClick={() => moveTo("#intro")} className="hover:text-teal-400">{about}</button></li>
