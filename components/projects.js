@@ -14,9 +14,9 @@ export const projects = [
   },
   
   {
-    title: ["Chess", <FaChess className="text-emerald-400 sm:text-xl text-3xl" key={1} /> ],
-    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Socket.io | MongoDB"],
-    footer: [ "https://github.com/omarabdiwali/next-chess", "https://chess-jtgk.onrender.com" ],
+    title: ["AblyChess", <FaChess className="text-emerald-400 sm:text-xl text-3xl" key={1} /> ],
+    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Ably | MongoDB"],
+    footer: [ "https://github.com/omarabdiwali/ably-chess", "https://ably-chess.vercel.app" ],
   },
 
   {
