@@ -12,17 +12,17 @@ export const projects = [
     body: ["A VSCode extension that allows users mention files to LLMs, with OpenRouter and Ollama integration. It also has an 'Agent' Mode, which will execute what the user wants.", "Node.js | OpenRouter | Ollama | VSCode | HTML | CSS"],
     footer: [ "https://github.com/omarabdiwali/codenexus-ai" ]
   },
-  
-  {
-    title: ["AblyChess", <FaChess className="text-emerald-400 text-3xl" key={1} /> ],
-    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Ably | MongoDB"],
-    footer: [ "https://github.com/omarabdiwali/ably-chess", "https://ably-chess.vercel.app" ],
-  },
 
   {
-    title: ["Cellular Automaton", <GiConwayLifeGlider className="text-emerald-400 text-3xl" key={2} />],
-    body: ["A cellular automaton which combines 4 masks, customizable with different rules and neighbors, made with Next.js and WebGPU.", "React | WebGPU | TailwindCSS"],
+    title: ["Cellular Automaton", <GiConwayLifeGlider className="text-emerald-400 text-3xl" key={1} />],
+    body: ["A cellular automaton simulator which combines 4 masks, customizable with different rules and neighbors, made with Next.js and WebGPU.", "React | WebGPU | TailwindCSS"],
     footer: [ "https://github.com/omarabdiwali/cellular-automaton", "https://cellularautomaton.vercel.app" ]
+  },
+  
+  {
+    title: ["AblyChess", <FaChess className="text-emerald-400 text-3xl" key={2} /> ],
+    body: ["A online chess game where players are able to play against each other in private rooms, or against a computer.", "Next.js | Node.js | CSS | Ably | MongoDB"],
+    footer: [ "https://github.com/omarabdiwali/ably-chess", "https://ably-chess.vercel.app" ],
   },
 
   {
