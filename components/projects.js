@@ -1,4 +1,4 @@
-import { FaChess } from "react-icons/fa";
+import { FaChess, FaFootballBall } from "react-icons/fa";
 import { RiAiGenerate } from "react-icons/ri";
 import { GiConwayLifeGlider, GiNotebook } from "react-icons/gi";
 import { AiOutlineLineChart, AiFillBook } from "react-icons/ai";
@@ -32,27 +32,27 @@ export const projects = [
   },
 
   {
-    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={4} />],
+    title: [ "NFL Scoirgami", <FaFootballBall className="text-emerald-400 text-3xl " key={4}  /> ],
+    body: ["A Next.js app tracking unique NFL scores & tweeting from @NFLScorigamiBot. Using AWS EventBridge and Lambda, it checks for new scores every minute on gamedays.", "Next.js | AWS | EventBridge | Lambda | TailwindCSS | Twitter API"],
+    footer: [ "https://github.com/omarabdiwali/nfl-scorigami", "https://nfl-scorigami.vercel.app" ]
+  },
+
+  {
+    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={5} />],
     body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS"],
     footer: ["https://github.com/omarabdiwali/dijkstra-visualizer", "https://dijkstra-visualizer.vercel.app/"]
   },
 
   {
-    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={5}  /> ],
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={6}  /> ],
     body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
   },
 
   {
-    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={6}  /> ],
+    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={7}  /> ],
     body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
-  },
-
-  {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={7}  /> ],
-    body: ["This is the code that made this website. The background is simulating Conway's Game of Life, and also allows users to interact with it.", "Next.js | Tailwind CSS"],
-    footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
 
   {
