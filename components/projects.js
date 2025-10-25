@@ -1,7 +1,7 @@
 import { FaChess, FaFootballBall } from "react-icons/fa";
 import { RiAiGenerate } from "react-icons/ri";
 import { GiConwayLifeGlider, GiNotebook } from "react-icons/gi";
-import { AiOutlineLineChart, AiFillBook } from "react-icons/ai";
+import { AiOutlineLineChart } from "react-icons/ai";
 import { BsWindowFullscreen, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 import { VscWholeWord } from "react-icons/vsc";
@@ -32,9 +32,9 @@ export const projects = [
   },
 
   {
-    title: [ "NFL Scoirgami", <FaFootballBall className="text-emerald-400 text-3xl " key={4}  /> ],
-    body: ["A Next.js app tracking unique NFL scores & tweeting from @NFLScorigamiBot. Using AWS EventBridge and Lambda, it checks for new scores every minute on gamedays.", "Next.js | AWS | EventBridge | Lambda | TailwindCSS | Twitter API"],
-    footer: [ "https://github.com/omarabdiwali/nfl-scorigami", "https://nfl-scorigami.vercel.app" ]
+    title: [ "Scorigami", <FaFootballBall className="text-emerald-400 text-3xl " key={4}  /> ],
+    body: ["A sports score tracker that graphs and tweets scores, powered by AWS EventBridge and Lambda.", "Next.js | AWS | EventBridge | Lambda | TailwindCSS | Twitter API"],
+    footer: [ "https://github.com/omarabdiwali/scorigami", "https://nfl-scorigami.vercel.app" ]
   },
 
   {
@@ -62,9 +62,9 @@ export const projects = [
   },
 
   {
-    title: ["Open Library", <AiFillBook className="text-emerald-400 text-3xl" key={9} />],
-    body: ["This website is a little library that I made using ReactJS, the Google Books API, and the New York Times API.", "React.js | Chakra UI | Tailwaind CSS"],
-    footer: [ "https://github.com/omarabdiwali/openLibrary", "https://open-library.vercel.app" ]
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={9}  /> ],
+    body: ["This is the code that made this website. The background is simulating Conway's Game of Life, and also allows users to interact with it.", "Next.js | Tailwind CSS"],
+    footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },
   
 ]
