@@ -29,10 +29,6 @@ module.exports = {
       },
       maxHeight: {
         'body': '35vh'
-      },
-      screens: {
-        'xs': '376px',
-        'xxs': '0px'
       }
     },
   },

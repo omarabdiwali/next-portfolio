@@ -38,27 +38,27 @@ export const projects = [
   },
 
   {
-    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={5} />],
+    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={5} />],
+    body: ["A wordle clone, able to be played multiple times. Over 7000 words to choose from, giving a definition of the word at the completion.", "Next.js | Node.js | TailwindCSS"],
+    footer: [ "https://github.com/omarabdiwali/wrdle", "https://wrrdle.vercel.app" ]
+  },
+
+  {
+    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={6} />],
     body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS"],
     footer: ["https://github.com/omarabdiwali/dijkstra-visualizer", "https://dijkstra-visualizer.vercel.app/"]
   },
 
   {
-    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={6}  /> ],
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={7}  /> ],
     body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
   },
 
   {
-    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={7}  /> ],
+    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={8}  /> ],
     body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
-  },
-
-  {
-    title: ["Wordle", <VscWholeWord className="text-emerald-400 text-3xl " key={8} />],
-    body: ["A wordle clone, able to be played multiple times. Over 7000 words to choose from, giving a definition of the word at the completion.", "Next.js | Node.js | TailwindCSS"],
-    footer: [ "https://github.com/omarabdiwali/wrdle", "https://wrrdle.vercel.app" ]
   },
 
   {
