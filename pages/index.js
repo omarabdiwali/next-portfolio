@@ -5,7 +5,19 @@ import { MdEmail, MdKeyboardArrowDown } from "react-icons/md";
 import ProjectSec from "@/components/projectsSec";
 import { mobileCheck } from "@/components/mobileCheck";
 import Link from "next/link";
+import ExperienceCard from "@/components/ExperienceCard";
 
+const experienceData = {
+  title: ["Software Development Engineer Intern", "Amazon"],
+  location: "Toronto, ON",
+  duration: "06/2024 - 08/2024",
+  logo: "/images/amzn.png",
+  points: [
+    "Created an internal service that helps developers verify that their changes exist before using it in runtime, with a React frontend and a Lambda Java backend",
+    "Added necessary guardrails to an existing and integral Alexa service that handles millions of requests, limiting the causes of errors available",
+    "Solely designed, developed, and documented both projects from beginning to end, using various AWS components such as AppConfig, Lambda, and IAM Roles"
+  ]
+};
 const cellSize = 10;
 let previousPosition = {};
 
@@ -27,6 +39,7 @@ export default function Home() {
 
   const runningRef = useRef(false);
   const projectRef = useRef(null);
+  const experienceRef = useRef(null);
   const socialsRef = useRef(null);
   const canvasRef = useRef(null);
   const headerRef = useRef(null);
@@ -34,7 +47,7 @@ export default function Home() {
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   const scrollToSection = (sectionIndex, smooth = true) => {
-    const sections = [headerRef.current, projectRef.current, socialsRef.current];
+    const sections = [headerRef.current, experienceRef.current, projectRef.current, socialsRef.current];
     if (sections[sectionIndex]) {
       sections[sectionIndex].scrollIntoView({
         behavior: smooth ? 'smooth' : 'instant',
@@ -145,6 +158,7 @@ export default function Home() {
 
     const sections = [
       headerRef.current?.offsetTop || 0,
+      experienceRef.current?.offsetTop || 0,
       projectRef.current?.offsetTop || 0,
       socialsRef.current?.offsetTop || 0
     ];
@@ -350,12 +364,18 @@ export default function Home() {
             </button>
             <button
               onClick={() => scrollToSection(1)}
+              className={`text-lg transition-colors ${currentSection === 2 ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-300'}`}
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection(2)}
               className={`text-lg transition-colors ${currentSection === 1 ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-300'}`}
             >
               Projects
             </button>
             <button
-              onClick={() => scrollToSection(2)}
+              onClick={() => scrollToSection(3)}
               className={`text-lg transition-colors ${currentSection === 2 ? 'text-emerald-400' : 'text-slate-400 hover:text-emerald-300'}`}
             >
               Contact
@@ -378,14 +398,21 @@ export default function Home() {
         {renderScrollIndicator()}
       </header>
 
-      <section ref={projectRef} className="py-20 bg-slate-900/50 backdrop-blur-sm">
+      <section ref={experienceRef} className="py-20 bg-slate-900/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
+          <div className="text-emerald-400 text-4xl mb-16 font-light">Experience</div>
+          <ExperienceCard experience={experienceData} />
+        </div>
+      </section>
+
+      <section ref={projectRef} className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-emerald-400 text-4xl mb-16 font-light">Featured Projects</div>
           <ProjectSec />
         </div>
       </section>
 
-      <section ref={socialsRef} className="py-20">
+      <section ref={socialsRef} className="py-20 bg-slate-900/50 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="text-emerald-400 text-4xl mb-12">Contact</div>
 
