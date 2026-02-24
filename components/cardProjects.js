@@ -31,7 +31,7 @@ export default function CardProjects({ project }) {
                 className="flex cursor-pointer items-center text-slate-300 hover:text-emerald-400 transition-colors group/website"
               >
                 <MdLanguage className="mr-1 text-emerald-400" />
-                <span>Live Demo</span>
+                <span>Website</span>
               </Link>
             )}
             <Link
