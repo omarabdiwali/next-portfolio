@@ -1,11 +1,10 @@
 import React from 'react';
-import Image from 'next/image'; // Next.js Image for optimization
+import Image from 'next/image';
 
 export default function ExperienceCard({ experience }) {
   return (
     <div className="group bg-slate-900/70 hover:bg-slate-900/80 border border-emerald-500/20 hover:border-emerald-500/40 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl shadow-emerald-500/10 max-w-4xl mx-auto p-10 md:p-12">
       <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
-        {/* Company Logo/Icon Section */}
         <div className="flex flex-col items-center lg:items-start gap-4 flex-shrink-0">
           <div className="w-24 h-24 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-500/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 overflow-hidden">
             {experience.logo ? (
@@ -18,7 +17,6 @@ export default function ExperienceCard({ experience }) {
                 priority={true}
               />
             ) : (
-              // Fallback to initial if no logo provided
               <span className="text-4xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-cyan-400 drop-shadow-lg">
                 {experience.title[1][0]}
               </span>
@@ -29,7 +27,6 @@ export default function ExperienceCard({ experience }) {
           </div>
         </div>
 
-        {/* Content Section */}
         <div className="flex-1 flex flex-col gap-6">
           <div className="space-y-2">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-100 leading-tight group-hover:text-emerald-50 transition-colors">

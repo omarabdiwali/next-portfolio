@@ -1,7 +1,7 @@
 import { FaChess, FaFootballBall } from "react-icons/fa";
 import { RiAiGenerate } from "react-icons/ri";
 import { GiConwayLifeGlider, GiNotebook } from "react-icons/gi";
-import { AiOutlineLineChart } from "react-icons/ai";
+import { AiOutlineLineChart, AiOutlineQrcode } from "react-icons/ai";
 import { BsWindowFullscreen, BsCardText } from "react-icons/bs";
 import { MdGpsFixed } from "react-icons/md";
 import { VscWholeWord } from "react-icons/vsc";
@@ -26,9 +26,9 @@ export const projects = [
   },
 
   {
-    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={3}  /> ],
-    body: ["A stock simulator where users are able to buy, sell, and view stocks and crypto, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
-    footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
+    title: [ "QR Code Reader", <AiOutlineQrcode className="text-emerald-400 text-3xl " key={3}  /> ],
+    body: ["A Python QR code processing system that analyzes images, detects structural patterns, generates visual annotations, and decodes data.", "Python | Pillow | XML"],
+    footer: [ "https://github.com/omarabdiwali/qr-code-decoder" ]
   },
 
   {
@@ -44,25 +44,31 @@ export const projects = [
   },
 
   {
-    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={6} />],
+    title: [ "Stock Simulator", <AiOutlineLineChart className="text-emerald-400 text-3xl " key={6}  /> ],
+    body: ["A stock simulator where users are able to buy, sell, and view stocks and crypto, with everything saved in a database.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
+    footer: [ "https://github.com/omarabdiwali/stock-simulator", "https://stocksimulator.vercel.app" ]
+  },
+
+  {
+    title: ["Pathfinding Visualizer", <MdGpsFixed className="text-emerald-400 text-3xl" key={7} />],
     body: ["This is a pathfinding visualizer with A* Search and Dijkstra. It has a start, point, and end node.", "Next.js | CSS"],
     footer: ["https://github.com/omarabdiwali/dijkstra-visualizer", "https://dijkstra-visualizer.vercel.app/"]
   },
 
   {
-    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={7}  /> ],
+    title: [ "FlashCards", <BsCardText className="text-emerald-400 text-3xl " key={8}  /> ],
     body: ["This is a Next.js website that allows users to create and collab on flashcards in folders, and allow them to be public or private.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/flashcards", "https://omar-flashcards.vercel.app" ]
   },
 
   {
-    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={8}  /> ],
+    title: [ "NoteSession", <GiNotebook className="text-emerald-400 text-3xl " key={9}  /> ],
     body: ["A website that allows users to create notes. It is typed using Markdown syntax, and notes are grouped using their importance and urgency label.", "Next.js | Node.js | TaiwindCSS | MongoDB | OAuth"],
     footer: [ "https://github.com/omarabdiwali/note-session", "https://note-session.vercel.app"]
   },
 
   {
-    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={9}  /> ],
+    title: [ "Portfolio", <BsWindowFullscreen className="text-emerald-400 text-3xl " key={10}  /> ],
     body: ["This is the code that made this website. The background is simulating Conway's Game of Life, and also allows users to interact with it.", "Next.js | Tailwind CSS"],
     footer: [ "https://github.com/omarabdiwali/next-portfolio", "https://omarabdiwali.vercel.app" ]
   },

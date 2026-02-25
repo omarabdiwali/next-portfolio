@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function CardProjects({ project }) {
   return (
     <div className="bg-slate-900/70 border border-emerald-500/10 rounded-xl overflow-hidden backdrop-blur-sm hover:border-emerald-500/30 transition-all group relative">
-      {/* Fixed: Added pointer-events-none to make the gradient not block clicks */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-emerald-500/5 group-hover:from-emerald-500/5 group-hover:to-emerald-500/10 transition-all pointer-events-none"></div>
 
       <div className="p-6">
@@ -41,7 +40,7 @@ export default function CardProjects({ project }) {
               className="flex items-center text-slate-300 hover:text-emerald-400 transition-colors"
             >
               <AiOutlineGithub className="mr-1 text-emerald-400" />
-              <span>Code</span>
+              <span>Repository</span>
             </Link>
           </div>
         </div>
