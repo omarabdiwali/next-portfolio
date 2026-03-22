@@ -35,16 +35,16 @@ export default function ExperienceCard({ experience }) {
             <div className="flex flex-col sm:flex-row gap-2 text-slate-400">
               <span className="font-mono text-lg">{experience.location}</span>
               <span className="hidden sm:inline">/</span>
-              <span className="font-mono text-emerald-400 text-lg font-medium bg-emerald-500/10 px-3 py-1 rounded-full">
+              <span className="font-mono text-emerald-400 text-lg font-medium bg-emerald-500/10 px-3 rounded-full">
                 {experience.duration}
               </span>
             </div>
           </div>
 
-          <ul className="space-y-5 pl-0">
+          <ul className="space-y-4 pl-0">
             {experience.points.map((point, i) => (
-              <li key={i} className="group/list flex items-start gap-4 text-slate-300 text-base md:text-lg leading-relaxed hover:text-slate-200 transition-colors duration-200">
-                <div className="flex-shrink-0 w-6 h-6 mt-1.5 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-80 group-hover/list:opacity-100 transition-all duration-200 flex items-center justify-center"></div>
+              <li key={i} className="group/list flex items-start gap-4 text-slate-300 text-base md:text-md leading-relaxed hover:text-slate-200 transition-colors duration-200">
+                <div className="flex-shrink-0 w-4 h-4 mt-1.5 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-80 group-hover/list:opacity-100 transition-all duration-200 flex items-center justify-center"></div>
                 <span className="flex-1">{point}</span>
               </li>
             ))}

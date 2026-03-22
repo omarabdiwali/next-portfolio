@@ -13,9 +13,11 @@ const experienceData = {
   duration: "06/2024 - 08/2024",
   logo: "/images/amzn.png",
   points: [
-    "Created an internal service that helps developers verify that their changes exist before using it in runtime, with a React frontend and a Lambda Java backend",
-    "Added necessary guardrails to an existing and integral Alexa service that handles millions of requests, limiting the causes of errors available",
-    "Solely designed, developed, and documented both projects from beginning to end, using various AWS components such as AppConfig, Lambda, and IAM Roles"
+    "Built a full-stack testing platform using React and Java that let Alexa engineers validate routing changes in a virtual environment, removing the slow and expensive need for physical hardware",
+    "Developed a simulation engine that catches configuration mistakes early, ensuring Alexa routing rules work exactly as expected before they ever touch production",
+    "Added automated guardrails directly into the CI/CD pipeline using Java, which now verifies every routing rule across all global regions to prevent outages",
+    "Owned the entire project from start to finish: I handled everything from interviewing stakeholders and writing design docs to shipping the final code and documentation",
+    "Used AWS services like AppConfig and Lambda to build a secure, scalable architecture that stays in sync with the team's production environment"
   ]
 };
 const cellSize = 10;
@@ -256,7 +258,7 @@ export default function Home() {
     const spell = async () => {
       const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
       let value = `Hello, I'm Omar!`;
-      let paraValue = "I design and build applications where technology meets creativity. With experience from Amazon and my passion for elegant solutions, I craft digital experiences that matter.";
+      let paraValue = "I'm a Software Engineer with a passion for building tools that actually make a difference. From my time at Amazon to my own deep-dives into programming, I enjoy the whole process, from the first line of code to the final launch. I'm a fast learner, a generalist, and always up for a new challenge.";
       setReduced(!!isReduced);
 
       if (!!isReduced) {
